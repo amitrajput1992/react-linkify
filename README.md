@@ -1,21 +1,19 @@
-# [react-linkify](http://tasti.github.io/react-linkify/)
+# [react-linkify](https://github.com/amitrajput1992/react-linkify/)
 React component to parse links (urls, emails, etc.) in text into clickable links
 
-## Examples
-
-Live examples are available at [http://tasti.github.io/react-linkify/](http://tasti.github.io/react-linkify/).
+> Forked from the amazing https://github.com/tasti/react-linkify repo, converted to use latest features of typescript and react, ESM and CJS bindings
 
 ### Basic
 
 Any link that appears inside the `Linkify` component will become clickable.
 
 ```
-<Linkify>See examples at tasti.github.io/react-linkify/.</Linkify>
+<Linkify>See examples at amitrajput1992.github.io/react-linkify/.</Linkify>
 ```
 
 Renders to:
 
-See examples at `tasti.github.io/react-linkify/`.
+See examples at `amitrajput1992.github.io/react-linkify/`.
 
 ### Advanced
 
@@ -23,19 +21,19 @@ If you're feeling lazy, you can wrap `Linkify` around anywhere that you want lin
 
 ```
 <Linkify>
-  <div>react-linkify <span>(tasti.github.io/react-linkify/)</span></div>
+  <div>react-linkify <span>(amitrajput1992.github.io/react-linkify/)</span></div>
     <div>React component to parse links (urls, emails, etc.) in text into clickable links</div>
-  See examples at tasti.github.io/react-linkify/.
-    <footer>Contact: tasti@zakarie.com</footer>
+  See examples at amitrajput1992.github.io/react-linkify/.
+    <footer>Contact: amitrajput1992@zakarie.com</footer>
 </Linkify>
 ```
 
 Renders to:
 
-react-linkify (`tasti.github.io/react-linkify/`)
+react-linkify (`amitrajput1992.github.io/react-linkify/`)
 React component to parse links (urls, emails, etc.) in text into clickable links
-See examples at `tasti.github.io/react-linkify/`.
-Contact: `tasti@zakarie.com`
+See examples at `amitrajput1992.github.io/react-linkify/`.
+Contact: `amitrajput1992@zakarie.com`
 
 
 ## Installation
@@ -56,7 +54,7 @@ npm install react-linkify --save
 import Linkify from 'react-linkify';
 
 React.render(
-  <Linkify>Examples are available at tasti.github.io/react-linkify/.</Linkify>,
+  <Linkify>Examples are available at amitrajput1992.github.io/react-linkify/.</Linkify>,
   document.body
 );
 ```
