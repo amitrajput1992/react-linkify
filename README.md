@@ -35,19 +35,25 @@ React component to parse links (urls, emails, etc.) in text into clickable links
 ## Installation
 
 ```
-yarn add react-linkify
+yarn add @amit.rajput/react-linkify
 ```
 
 or
 
 ```
-npm install react-linkify --save
+npm install @amit.rajput/react-linkify --save
+```
+
+or
+
+```
+pnpm i @amit.rajput/react-linkify --save
 ```
 
 ## Usage
 
 ```js
-import Linkify from 'react-linkify';
+import Linkify from '@amit.rajput/react-linkify';
 
 React.render(
   <Linkify>Examples are available at amitrajput1992.github.io/react-linkify/.</Linkify>,
@@ -72,7 +78,7 @@ NOTE: Use `Linkify.MATCH` as a value to specify the matched link. The properties
 
 ## Customization
 
-You can access to the global `Linkify` instance used to linkify contents by importing it (`import { linkify } from 'react-linkify'`).
+You can access to the global `Linkify` instance used to linkify contents by importing it (`import { linkify } from '@amit.rajput/react-linkify'`).
 That way you can customize as needed (e.g. disabling existing schemas or adding new ones).
 
 Note that any customization made to that instance will affect every `Linkify` component you use.
