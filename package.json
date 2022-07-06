@@ -33,7 +33,7 @@
   "scripts": {
     "buildesm": "node_modules/.bin/tsc --project src/ -p src/tsconfig-esm.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/esm/src/ --cwd=src/ --parents;",
     "buildcjs": "node_modules/.bin/tsc --project src/ -p src/tsconfig-cjs.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/cjs/src/ --cwd=src/ --parents;",
-    "build": "del lib; pnpm buildesm && pnpm buildcjs",
+    "build": "del lib; yarn buildesm && yarn buildcjs",
     "publish:version": "N=$(node -p \"require('./package.json').name\") && npm version patch && git push --tags",
     "test": "BABEL_JEST_STAGE=0 jest --testPathIgnorePatterns /dist/"
   },
