@@ -30,6 +30,9 @@
     "urlize",
     "urlify"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "buildesm": "node_modules/.bin/tsc --project src/ -p src/tsconfig-esm.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/esm/src/ --cwd=src/ --parents;",
     "buildcjs": "node_modules/.bin/tsc --project src/ -p src/tsconfig-cjs.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/cjs/src/ --cwd=src/ --parents;",
