@@ -22,9 +22,7 @@ If you're feeling lazy, you can wrap `Linkify` around anywhere that you want lin
 ```
 <Linkify>
   <div>react-linkify <span>(amitrajput1992.github.io/react-linkify/)</span></div>
-    <div>React component to parse links (urls, emails, etc.) in text into clickable links</div>
-  See examples at amitrajput1992.github.io/react-linkify/.
-    <footer>Contact: amitrajput1992@zakarie.com</footer>
+    <div>React component to parse links (urls, emails, etc.) in text into clickable links</div>   
 </Linkify>
 ```
 
@@ -32,8 +30,6 @@ Renders to:
 
 react-linkify (`amitrajput1992.github.io/react-linkify/`)
 React component to parse links (urls, emails, etc.) in text into clickable links
-See examples at `amitrajput1992.github.io/react-linkify/`.
-Contact: `amitrajput1992@zakarie.com`
 
 
 ## Installation
