@@ -1,6 +1,6 @@
 {
   "name": "@amit.rajput/react-linkify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React component to parse links (urls, emails, etc.) in text into clickable links",
   "homepage": "https://github.com/amitrajput1992/react-linkify/",
   "author": "Amit Rajput",
