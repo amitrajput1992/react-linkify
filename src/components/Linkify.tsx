@@ -6,6 +6,7 @@ import defaultMatchDecorator from "../decorators/defaultMatchDecorator";
 import defaultTextDecorator from "../decorators/defaultTextDecorator";
 
 type Props = {
+  renderAs?: "child" | "innerHTML",
   children: React.ReactNode,
   componentDecorator?: (decoratedHref: string, decoratedText: string, key: number) => React.ReactNode,
   hrefDecorator?: (href: string) => string,
@@ -20,6 +21,7 @@ const Linkify = (props: Props) => {
     textDecorator = defaultTextDecorator,
     hrefDecorator = defaultHrefDecorator,
     children,
+    renderAs = "child"
   } = props;
 
   function parseString(string: string) {
@@ -68,11 +70,18 @@ const Linkify = (props: Props) => {
     return children;
   }
 
-  return (
-    <React.Fragment>
-      {parse(children)}
-    </React.Fragment>
-  );
+  if(renderAs === "child") {
+    return (
+      <React.Fragment>
+        {parse(children)}
+      </React.Fragment>
+    );
+  } else {
+    const content = parse(children);
+    return (
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    );
+  }
 };
 
 export default Linkify;
