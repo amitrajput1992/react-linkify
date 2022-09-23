@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/amitrajput1992/react-linkify.svg?branch=master)](https://app.travis-ci.com/amitrajput1992/react-linkify)
+
 # [react-linkify](https://github.com/amitrajput1992/react-linkify/)
 React component to parse links (urls, emails, etc.) in text into clickable links
 
