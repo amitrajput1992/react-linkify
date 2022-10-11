@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import { renderToString } from "react-dom/server";
 import { Match } from "linkify-it";
 import defaultComponentDecorator from "../decorators/defaultComponentDecorator";
 import defaultHrefDecorator from "../decorators/defaultHrefDecorator";
@@ -77,11 +78,21 @@ const Linkify = (props: Props) => {
       </React.Fragment>
     );
   } else {
+    // Support react components as innerHTML
     const content = parse(children);
+    const stringifiedContent = htmlDecode(renderToString(content));
+
     return (
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div dangerouslySetInnerHTML={{ __html: stringifiedContent }} />
     );
   }
 };
+
+function htmlDecode(input: string): string {
+  const e = document.createElement("textarea");
+  e.innerHTML = input;
+  // handle case of empty input
+  return e.childNodes.length === 0 ? "" : (e.childNodes[0].nodeValue as string);
+}
 
 export default Linkify;
